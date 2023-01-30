@@ -28,22 +28,22 @@ We have an application running in kubernetes, that application is saying *Hello,
 Now lets jump in the Github repository first.
 
 ![repo](https://user-images.githubusercontent.com/115881685/215599012-c12f4fcc-7ff2-40c3-8d61-1d9f37850885.png)
-
 This is the kubernetescode repository where we have our applicationfile and dockerfile.
 
+
 ![repo 2](https://user-images.githubusercontent.com/115881685/215599843-cb39bd01-d67f-409d-b036-74d09f934678.png)
-
-
 Our application code is app.py. It is a very simple python program, which is importing the library flask and just returning Hello, Docker project!
 
+
 ![repo 3](https://user-images.githubusercontent.com/115881685/215601234-51d90fb6-7a68-4694-82e4-685522b55f7d.png)
-
-
 The file requirements.txt list the external library flask, and in this case we are specifically using the version 2.1.0
 
-![repo 4](https://user-images.githubusercontent.com/115881685/215602130-f844cc27-61ae-4476-a4b6-e3ce6ffe84ac.png)
 
+![repo 4](https://user-images.githubusercontent.com/115881685/215602130-f844cc27-61ae-4476-a4b6-e3ce6ffe84ac.png)
 The dockerfile dockerizes that python program and creates a container image. It is using the base python 3.8 docker image, and then its copying over the requirement file running a pip install of the flask. There it is running the python program accepting incoming connection.
+
+
+
 
  
 
