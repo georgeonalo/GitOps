@@ -44,8 +44,52 @@ The dockerfile dockerizes that python program and creates a container image. It 
 
 
 
+```
+node {
+    def app
 
- 
+    stage('Clone repository') {
+      
+
+        checkout scm
+    }
+
+    stage('Build image') {
+  
+       app = docker.build("georgenal/test")
+    }
+
+    stage('Test image') {
+  
+
+        app.inside {
+            sh 'echo "Tests passed"'
+        }
+    }
+
+    stage('Push image') {
+        
+        docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
+            app.push("${env.BUILD_NUMBER}")
+        }
+    }
+    
+    stage('Trigger ManifestUpdate') {
+                echo "triggering updatemanifestjob"
+                build job: 'updatemanifest', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
+        }
+}
+```
+
+This the jenkinsfile which is for the job that is creating the container image.
+
+In the first stage it clones this repository into the jenkins enviroment and then it builds the container image.
+
+The next stage is a dummy place holder.
+
+In the next stage is where i push the image to dockerhub.
+
+And in the last stage, we trigger another jenkins job to update the deployment file, and the name of the this job is *updatemanifest* 
 
 
 
