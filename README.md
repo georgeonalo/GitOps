@@ -145,6 +145,26 @@ The first step is similar, it clones this repository in the jenkins enviroment, 
 
 
 ### Jenkins Installation
+For detailed explanation on how to install jenkins on ec2 (not on your local machine because we are going to need webhook) see the aws official [documentation](https://www.jenkins.io/doc/tutorials/tutorial-for-installing-jenkins-on-AWS/) page.
+
+![5](https://user-images.githubusercontent.com/115881685/215617093-ab07ac8e-f62a-483a-947c-17f0d189c805.png)
+*My ec2 machine*
+
+
+![6](https://user-images.githubusercontent.com/115881685/215617278-c13bc81d-0584-4176-b3f2-e386fe3489df.png)
+*Sshed into the machine*
+
+
+![7](https://user-images.githubusercontent.com/115881685/215617634-7e83b4df-73b7-428d-9fa3-fd3354cab749.png)
+*installed jenkins*
+
+![8](https://user-images.githubusercontent.com/115881685/215617848-6c7ffe47-74b9-40d4-9db2-c6745cf632ac.png)
+*accessed jenkins url*
+
+
+
+
+
 
 
 
