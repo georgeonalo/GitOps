@@ -161,6 +161,20 @@ For detailed explanation on how to install jenkins on ec2 (not on your local mac
 ![8](https://user-images.githubusercontent.com/115881685/215617848-6c7ffe47-74b9-40d4-9db2-c6745cf632ac.png)
 *accessed jenkins url*
 
+#### Next step setup credentials for dockerhub and github
+
+To do this, on the jenkins home page, click *manage jenkin, manage credntials, under Global click jenkins, and then add credentials*
+scroll down to the id field, label it "Dockerhub".
+
+add another credentials again, scroll down to the id field and label it "Github".
+
+Pls note the username here respectively is the username for your github and dockerhub accounts not the email id used for login.
+
+And also, the password is not the login password, instead it should be a token code that is generated respectively from both github and dockerhub accounts.
+
+![9](https://user-images.githubusercontent.com/115881685/215621053-3314b92c-89a6-481d-ac61-22cdc4cc4666.png)
+
+
 
 
 
