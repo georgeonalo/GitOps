@@ -93,7 +93,16 @@ And in the last stage, we trigger another jenkins job to update the deployment f
 
 
 
+![repo 5](https://user-images.githubusercontent.com/115881685/215608198-fa93e034-8d2f-4d77-94dc-469ae813a54b.png)
+This is the kubernetesmanifest repository which contains a jenkinsfile and a deploymentfile for the jenkins job to update the deployment.
 
+
+
+![repo 7](https://user-images.githubusercontent.com/115881685/215611245-8e9c0a0b-a9ab-4cff-a76c-991db0a8b607.png)
+![repo 6(1)](https://user-images.githubusercontent.com/115881685/215611039-54c76f75-771e-45a4-9013-fda83771aec3.png)
+If we go to the deployment.yaml, the container image is referencing to the latest tag.
+
+And in the next step, we are creating a loadbalancer service to talk to the container.
 
 
 
