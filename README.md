@@ -106,7 +106,40 @@ And in the next step, we are creating a loadbalancer service to talk to the cont
 
 
 
+```
+node {
+    def app
 
+    stage('Clone repository') {
+      
+
+        checkout scm
+    }
+
+    stage('Update GIT') {
+            script {
+                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                    withCredentials([usernamePassword(credentialsId: 'github', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+                        //def encodedPassword = URLEncoder.encode("$GIT_PASSWORD",'UTF-8')
+                        sh "git config user.email onalotech7@gmail.com"
+                        sh "git config user.name georgeonalo"
+                        //sh "git switch main"
+                        sh "cat deployment.yaml"
+                        sh "sed -i 's+georgenal/test.*+georgenal/test:${DOCKERTAG}+g' deployment.yaml"
+                        sh "cat deployment.yaml"
+                        sh "git add ."
+                        sh "git commit -m 'Done by Jenkins Job changemanifest: ${env.BUILD_NUMBER}'"
+                        sh "git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/kubernetesmanifest.git HEAD:main"
+      }
+    }
+  }
+}
+}
+```
+
+This is the jenkinsfile for updating the deployment file.
+
+The first step is similar, it clones this repository in the jenkins enviroment, and in the second stage, it updates the file.
 
 
 
