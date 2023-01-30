@@ -25,6 +25,8 @@ We have an application running in kubernetes, that application is saying *Hello,
   * CI (Developer) and CD (Ops) permissions are seperated
 * GitOps doesn't mean getting rid of DevOps
 
+### Dockerfile and Jenkinsfile Walkthrough
+
 Now lets jump in the Github repository first.
 
 ![repo](https://user-images.githubusercontent.com/115881685/215599012-c12f4fcc-7ff2-40c3-8d61-1d9f37850885.png)
@@ -140,6 +142,10 @@ node {
 This is the jenkinsfile for updating the deployment file.
 
 The first step is similar, it clones this repository in the jenkins enviroment, and in the second stage, it updates the file.
+
+
+### Jenkins Installation
+
 
 
 
