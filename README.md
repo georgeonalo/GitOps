@@ -106,7 +106,7 @@ This is the [kubernetesmanifest](https://github.com/georgeonalo/kubernetesmanife
 
 
 
-![repo 7](https://user-images.githubusercontent.com/115881685/215611245-8e9c0a0b-a9ab-4cff-a76c-991db0a8b607.png)
+![image](https://user-images.githubusercontent.com/115881685/215740628-ac7140e9-800c-4e27-8e95-adc3f5cbf6bb.png)
 ![image](https://user-images.githubusercontent.com/115881685/215734825-f2a3fa43-5c64-40ca-b6db-f9cd3a6d23ca.png)
 If we go to the *deployment.yaml,* the container image is referencing to the latest tag.
 
