@@ -343,7 +343,7 @@ Perfect!!!
 
 Now go to Dockerhub and refresh,
 
-![image](https://user-images.githubusercontent.com/115881685/215727268-2788339f-3372-40ad-8726-b8262e488404.png)
+![image](https://user-images.githubusercontent.com/115881685/215732969-1e414a8b-9ed5-4466-a4be-eba14e7c3a67.png)
 
 Here you can see my newest image tag
 
