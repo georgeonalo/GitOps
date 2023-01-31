@@ -236,6 +236,10 @@ Going to our dockerhub we see that our very first image is now in the repository
 
 ![image](https://user-images.githubusercontent.com/115881685/215693532-04433b44-8a5c-4531-b2ee-cc2b0a35b8cc.png)
 
+We are done with setting, building and triggering our jobs, next step is to install ArgoCD
+
+
+
 
 ### ArgoCD (GitOps) Installation
 
