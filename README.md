@@ -313,6 +313,77 @@ Under content type: select *application/json* and then select *just the push eve
 
 ![image](https://user-images.githubusercontent.com/115881685/215718336-f6231d72-5768-4f51-b769-98a50477b8d8.png)
 
+Now go back to the jenkins job and tell it to trigger the job any time it receives a webhook.
+
+Go to the *buildimage* jenkins job, click *configure*, and select *Github hook trigger for Gitscm polling*, click *save*.
+
+Now everything is setup, it should be zero touch.
+
+Go to the application code and change something.
+
+![image](https://user-images.githubusercontent.com/115881685/215722719-529a27bc-f06d-44b1-9de6-23bd5d7f4f89.png)
+
+![image](https://user-images.githubusercontent.com/115881685/215721236-88b1eb6d-a3d8-425f-b583-ab6bf382e8cd.png)
+
+I changed the pls subscribe, comment and like this video to Hello, Docker project.
+
+scroll down and commit the changes.
+
+This should automatically trigger the buildimage using the webhook.
+
+![image](https://user-images.githubusercontent.com/115881685/215724030-52927fce-0bf0-4ee8-ae3a-8380347cd23d.png)
+
+sure it did!!
+
+Check the updatemanifest job, this should have also been automatically triggered.
+
+![image](https://user-images.githubusercontent.com/115881685/215724501-08c14f05-f4d0-45f2-9665-0200c3eaf080.png)
+
+Perfect!!!
+
+Now go to Dockerhub and refresh,
+
+![image](https://user-images.githubusercontent.com/115881685/215727268-2788339f-3372-40ad-8726-b8262e488404.png)
+
+Here you can see my newest image tag
+
+and if you go to the deployment.yaml file, this should have the new tag as well.
+
+![image](https://user-images.githubusercontent.com/115881685/215728425-ea463b3a-4c4e-4286-9d5f-eeaf1c23c9e8.png)
+
+Yes it is.
+
+And if we back to our ArgoCD flow, you will notice it has detected some changes, its terminating the old pods and creating new pods
+
+![image](https://user-images.githubusercontent.com/115881685/215729238-5feac211-3cc0-4ce5-9e4a-88e810969119.png)
+
+Go to the terminal and run kubectl get pods to see the new pods.
+
+![image](https://user-images.githubusercontent.com/115881685/215730041-3b30dcd0-55ec-4fa3-b4c2-e113429a7b61.png).
+
+yes we are on track, and finally go to the application page and refresh your browser.
+
+![image](https://user-images.githubusercontent.com/115881685/215730505-9dc002db-6945-4d29-a00f-c977def51548.png)
+
+
+Hurraaaaaaaaaaay!!!!
+
+As expected, the kubernetes loadbalancer service is pointing to the updated docker image with the updated code.
+
+Alright folks, we did it, end to end deployment into kubernetes cluster using jenkins, devops and gitops.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
