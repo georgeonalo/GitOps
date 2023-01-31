@@ -294,6 +294,7 @@ To get the loadbalancer url, run kubectl get svc
 ![image](https://user-images.githubusercontent.com/115881685/215713503-c0069976-df3f-4448-8043-25a809041725.png)
 
 copy the loadbalancer url and paste it on your browser and enter.
+
 ![image](https://user-images.githubusercontent.com/115881685/215714123-aa5d2104-6ea9-4b65-b028-6cd1652f5999.png)
 
 yessssssssss! and it worked. It is accessing the flask application.
@@ -302,7 +303,15 @@ Now the only thing left is to automatically trigger the jenkins job when ever i 
 
 ### Automating GitHub to jenkins using Webhook
 
+To setup the webhook, go to jenkins dashboard and copy the url, then go to your kubernetescode repository and click on *settings* and then select *webhook*, click *add webhook*, and then enter the url of the jenkins you just copied and then add *github-webhook/* to it, this must be done for it to work.
 
+Under content type: select *application/json* and then select *just the push event*, then hit the *add webhook* button in green.
+
+
+![image](https://user-images.githubusercontent.com/115881685/215717945-ffb8c4f9-60c6-49b5-86a7-e2b6339bb13f.png)
+![image](https://user-images.githubusercontent.com/115881685/215718076-f6adde0a-59c4-44e9-9c7a-def029218c19.png)
+
+![image](https://user-images.githubusercontent.com/115881685/215718336-f6231d72-5768-4f51-b769-98a50477b8d8.png)
 
 
 
