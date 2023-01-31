@@ -263,6 +263,58 @@ For detailed instruction on how to install ArgoCD, click on the official ArgoCD 
 
 
 
+### ArgoCD (GitOps) Setup
+
+Next we have to point GitOps(ArgoCD) to our kubernetesmanifest repository and deploy this app.
+
+To do this, go to the ArgoCD console and click *new app*. Enter the name *flaskdemo*, project: *default*, SYNC POLICY: *Automatic*.
+![image](https://user-images.githubusercontent.com/115881685/215710151-aa7bfc30-1b83-421a-92c5-0622f3f02cb0.png)
+![image](https://user-images.githubusercontent.com/115881685/215710485-716691b7-fc38-448e-8611-389d4bebe9b7.png)
+
+
+keep everything as it is and scroll down to Repository url which has to be pointed to our kubernetesmanifest repo. so go to the kubernetesmanifest repo and copy the https url and paste it.
+![image](https://user-images.githubusercontent.com/115881685/215710716-dc71db40-7171-48d9-a331-c26408e70bdb.png)
+![image](https://user-images.githubusercontent.com/115881685/215711027-7e3dd6d9-bf28-400e-b11c-a5bdb795493b.png)
+
+
+Under path: enter "./", under DESTINATION, select *"kubernetes.default.svc"*, under namespace, enter *default*. keep everything as it is and hit the *create* button
+![image](https://user-images.githubusercontent.com/115881685/215711310-a2f1d7d1-7321-4516-ba7f-a30cafcc8b84.png)
+![image](https://user-images.githubusercontent.com/115881685/215712075-db5a8b3a-2677-4ee8-804c-fede8952c053.png)
+
+And our application is deployed, click on it, and it will show you the flow, it created the loadbalancer, and behind the loadbalancer, there are three pods
+
+![image](https://user-images.githubusercontent.com/115881685/215712799-5fb41a23-4b37-42c2-9dbe-be2399271713.png)
+
+If we go back to our terminal and run kubectl get pos, we will see our three pods
+
+![image](https://user-images.githubusercontent.com/115881685/215713085-056312d4-9261-406a-a888-236e21c96302.png)
+
+To get the loadbalancer url, run kubectl get svc
+
+![image](https://user-images.githubusercontent.com/115881685/215713503-c0069976-df3f-4448-8043-25a809041725.png)
+
+copy the loadbalancer url and paste it on your browser and enter.
+![image](https://user-images.githubusercontent.com/115881685/215714123-aa5d2104-6ea9-4b65-b028-6cd1652f5999.png)
+
+yessssssssss! and it worked. It is accessing the flask application.
+
+Now the only thing left is to automatically trigger the jenkins job when ever i push my python code to the repository.
+
+### Automating GitHub to jenkins using Webhook
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
