@@ -194,7 +194,50 @@ and finally click *save*
 
 ![code](https://user-images.githubusercontent.com/115881685/215686480-2774f3fe-629c-4f2e-adcc-5c8ef943e32b.png)
 ![image](https://user-images.githubusercontent.com/115881685/215686957-b0bf5014-f42a-45b4-9f3a-546b7c578aef.png)
+![image](https://user-images.githubusercontent.com/115881685/215687471-bf10851e-db0d-499f-b1c3-7c468bd0ba85.png)
 
+
+#### Next we setup the jenkins manifestupdate job.
+
+like before, *click new item*, and enter the the name "updatemanifest", *select pipeline* and click "ok"
+![image](https://user-images.githubusercontent.com/115881685/215690369-b9871562-533b-4b3b-aa0a-5feeb8f01c6f.png)
+
+
+Select *this project is parametalized* and then add a *string parameter*. Name of the parameter is *DOCKERTAG*
+
+Default value is latest but it will be overide from the jenkins job.
+![image](https://user-images.githubusercontent.com/115881685/215690717-192f40f3-5512-434b-84d4-9d0a8bba027b.png)
+
+
+Again like before, Scroll down to pipeline, select pipeline script from SCM, and then Git under SCM
+
+Go back to kubernetesmanifest repo, click code and copy the http url and then paste it in the jenkins repository url.
+
+Under branch specifier, change it to *main*
+
+and click *save*
+![code 1](https://user-images.githubusercontent.com/115881685/215690974-1aeb8b34-4841-4ea2-8903-1b76bc9c7a19.png)
+![image](https://user-images.githubusercontent.com/115881685/215691219-20fc52d7-6fac-4318-b0a5-83885d87bb83.png)
+
+Now lets try to manually run the jobs that we have just created, go to the dashboard and select the "buildimage" job
+![image](https://user-images.githubusercontent.com/115881685/215691732-651b3ccf-d84b-4067-9c5b-8a13433cfae3.png)
+
+Click "build now"
+
+![image](https://user-images.githubusercontent.com/115881685/215692104-83ad7d75-93ce-494a-9c91-c2b80f6a730a.png)
+
+
+Our job gets built and this automatically triggers the updatemanifest job
+
+![image](https://user-images.githubusercontent.com/115881685/215692895-a5930d0e-2745-4606-a66b-5ee396cf8607.png)
+
+
+Going to our dockerhub we see that our very first image is now in the repository.
+
+![image](https://user-images.githubusercontent.com/115881685/215693532-04433b44-8a5c-4531-b2ee-cc2b0a35b8cc.png)
+
+
+### ArgoCD (GitOps) Installation
 
 
 
