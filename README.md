@@ -243,6 +243,26 @@ We are done with setting, building and triggering our jobs, next step is to inst
 
 ### ArgoCD (GitOps) Installation
 
+For detailed instruction on how to install ArgoCD, click on the official ArgoCD [documentation](https://argo-cd.readthedocs.io/en/stable/getting_started/) page.
+
+
+![image](https://user-images.githubusercontent.com/115881685/215696482-0b9d1de5-2c28-4fb2-acf4-8a3332147e42.png)
+*Argocd pods running*
+
+![image](https://user-images.githubusercontent.com/115881685/215696713-36002296-f4fe-49b3-93ee-0e53cf185197.png)
+![4](https://user-images.githubusercontent.com/115881685/215697681-86199977-e090-40cd-8495-2a28fea67813.png)
+
+![34(1)](https://user-images.githubusercontent.com/115881685/215697191-2bf56439-a965-4910-95cc-c900f0537343.png)
+*Accessing my ArgoCD UI and login in*
+
+![21](https://user-images.githubusercontent.com/115881685/215698138-c8659f04-8411-4aaa-b15b-f13a2aec8c21.png)
+*My ArgoCD dashboard*
+
+
+
+
+
+
 
 
 
