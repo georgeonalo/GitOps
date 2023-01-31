@@ -36,7 +36,7 @@ GitOps is used to automate the process of provisioning infrastructure. Similar t
 Now lets jump in the Github repository first.
 
 ![repo](https://user-images.githubusercontent.com/115881685/215599012-c12f4fcc-7ff2-40c3-8d61-1d9f37850885.png)
-This is the kubernetescode repository where we have our applicationfile and dockerfile.
+This is the [kubernetescode](https://github.com/georgeonalo/kubernetescode) repository where we have our applicationfile and dockerfile.
 
 
 ![repo 2](https://user-images.githubusercontent.com/115881685/215599843-cb39bd01-d67f-409d-b036-74d09f934678.png)
@@ -102,7 +102,7 @@ And in the last stage, we trigger another jenkins job to update the deployment f
 
 
 ![repo 5](https://user-images.githubusercontent.com/115881685/215608198-fa93e034-8d2f-4d77-94dc-469ae813a54b.png)
-This is the kubernetesmanifest repository which contains a jenkinsfile and a deploymentfile for the jenkins job to update the deployment.
+This is the [kubernetesmanifest](https://github.com/georgeonalo/kubernetesmanifest) repository which contains a jenkinsfile and a deploymentfile for the jenkins job to update the deployment.
 
 
 
