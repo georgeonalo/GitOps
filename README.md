@@ -40,15 +40,15 @@ This is the [kubernetescode](https://github.com/georgeonalo/kubernetescode) repo
 
 
 ![repo 2](https://user-images.githubusercontent.com/115881685/215599843-cb39bd01-d67f-409d-b036-74d09f934678.png)
-Our application code is app.py. It is a very simple python program, which is importing the library flask and just returning Hello, Docker project!
+Our application code is *app.py*. It is a very simple python program, which is importing the library flask and just returning Hello, Docker project!
 
 
 ![repo 3](https://user-images.githubusercontent.com/115881685/215601234-51d90fb6-7a68-4694-82e4-685522b55f7d.png)
-The file requirements.txt list the external library flask, and in this case we are specifically using the version 2.1.0
+The file *requirements.txt* list the external library flask, and in this case we are specifically using the version 2.1.0
 
 
 ![repo 4](https://user-images.githubusercontent.com/115881685/215602130-f844cc27-61ae-4476-a4b6-e3ce6ffe84ac.png)
-The dockerfile dockerizes that python program and creates a container image. It is using the base python 3.8 docker image, and then its copying over the requirement file running a pip install of the flask. There it is running the python program accepting incoming connection.
+The *dockerfile* dockerizes that python program and creates a container image. It is using the base python 3.8 docker image, and then its copying over the requirement file running a pip install of the flask. There it is running the python program accepting incoming connection.
 
 
 
@@ -89,7 +89,7 @@ node {
 }
 ```
 
-This the jenkinsfile which is for the job that is creating the container image.
+This the *jenkinsfile* which is for the job that is creating the container image.
 
 In the first stage it clones this repository into the jenkins enviroment and then it builds the container image.
 
@@ -102,13 +102,13 @@ And in the last stage, we trigger another jenkins job to update the deployment f
 
 
 ![repo 5](https://user-images.githubusercontent.com/115881685/215608198-fa93e034-8d2f-4d77-94dc-469ae813a54b.png)
-This is the [kubernetesmanifest](https://github.com/georgeonalo/kubernetesmanifest) repository which contains a jenkinsfile and a deploymentfile for the jenkins job to update the deployment.
+This is the [kubernetesmanifest](https://github.com/georgeonalo/kubernetesmanifest) repository which contains a *jenkinsfile* and a *deploymentfile* for the jenkins job to update the deployment.
 
 
 
 ![repo 7](https://user-images.githubusercontent.com/115881685/215611245-8e9c0a0b-a9ab-4cff-a76c-991db0a8b607.png)
 ![image](https://user-images.githubusercontent.com/115881685/215734825-f2a3fa43-5c64-40ca-b6db-f9cd3a6d23ca.png)
-If we go to the deployment.yaml, the container image is referencing to the latest tag.
+If we go to the *deployment.yaml,* the container image is referencing to the latest tag.
 
 And in the next step, we are creating a loadbalancer service to talk to the container.
 
@@ -145,7 +145,7 @@ node {
 }
 ```
 
-This is the jenkinsfile for updating the deployment file.
+This is the *jenkinsfile* for updating the deployment file.
 
 The first step is similar, it clones this repository in the jenkins enviroment, and in the second stage, it updates the file.
 
