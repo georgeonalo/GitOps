@@ -5,7 +5,7 @@ We have an application running in kubernetes, that application is saying *Hello,
 
 ### What will be covered in this project:
 * GitOps Workflow
-  * Difference with DevOps Workflow
+  * What is GitOps?
 * Dockerfile and Jenkinsfile Walkthrough
 * Jenkins Installation
 * Jenkins Jobs Setup
@@ -16,6 +16,12 @@ We have an application running in kubernetes, that application is saying *Hello,
 
 
 ![image](https://user-images.githubusercontent.com/115881685/209542342-7247a5d7-f6cd-43c0-b419-7d8b82ab7be6.png)
+
+
+
+GitOps is an operational framework that takes DevOps best practices used for application development such as version control, collaboration, compliance, and CI/CD tooling, and applies them to infrastructure automation.
+
+GitOps is used to automate the process of provisioning infrastructure. Similar to how teams use application source code, operations teams that adopt GitOps use configuration files stored as code (infrastructure as code). GitOps configuration files generate the same infrastructure environment every time it’s deployed, just as application source code generates the same application binaries every time it’s built.
 
 ### In Summary GitOps:
 * Periodically syncs the running cluster with the desired state in Git Repo
