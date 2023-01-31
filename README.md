@@ -179,6 +179,22 @@ And also, the password is not the login password, instead it should be a persona
 ### Jenkins Jobs Setup
 
 
+To create a jenkins job, *click new item*, and enter the the name "buildimage", *select pipeline* and click "ok"
+
+![new](https://user-images.githubusercontent.com/115881685/215684894-18a6ed8f-a313-4c81-9b0f-6a2cc8d895bc.png)
+
+
+Scroll down to pipeline, select pipeline script from SCM, and then Git under SCM
+
+Go back to kubernetescode repo, click code and copy the http url and then paste it in the repository url.
+
+Under branch specifier, change it to *main*
+
+and finally click *save*
+
+![code](https://user-images.githubusercontent.com/115881685/215686480-2774f3fe-629c-4f2e-adcc-5c8ef943e32b.png)
+![image](https://user-images.githubusercontent.com/115881685/215686957-b0bf5014-f42a-45b4-9f3a-546b7c578aef.png)
+
 
 
 
