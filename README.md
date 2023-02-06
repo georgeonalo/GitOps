@@ -1,7 +1,7 @@
 # End to end  Deployment in Kubernetes clusters using Jenkins, GitOps and GitHub Pipeline
 
 ### What are we going to achieve in this project?
-We have an application running in kubernetes, that application is saying *Pls subscribe, like and comment on this video. TY!!!*, and the magic starts happening when we change the code and push it to github. As soon as you commit the changes, a jenkins job get submitted automatically, builds a new image, pushes the image to Dockerhub, changes the deployment file with the latest image id, the new image automatically gets deployed to the kubernetes cluster using gitops, and our application starts pointing to the new pod.
+We have an application running in kubernetes, that application is saying **Pls subscribe, like and comment on this video. TY!!!**, and the magic starts happening when we change the code and push it to github. As soon as you commit the changes, a jenkins job get submitted automatically, builds a new image, pushes the image to Dockerhub, changes the deployment file with the latest image id, the new image automatically gets deployed to the kubernetes cluster using gitops, and our application starts pointing to the new pod.
 
 ### What will be covered in this project:
 * GitOps Workflow
@@ -50,7 +50,7 @@ This is the [kubernetescode](https://github.com/georgeonalo/kubernetescode) repo
 
 
 ![repo 2](https://user-images.githubusercontent.com/115881685/215599843-cb39bd01-d67f-409d-b036-74d09f934678.png)
-Our application code is *app.py*. It is a very simple python program, which is importing the library flask and just returning pls subscribe, like and comment on this video, TY!!!
+Our application code is **app.py**. It is a very simple python program, which is importing the library flask and just returning **pls subscribe, like and comment on this video, TY!!!**
 
 
 ![repo 3](https://user-images.githubusercontent.com/115881685/215601234-51d90fb6-7a68-4694-82e4-685522b55f7d.png)
@@ -99,7 +99,7 @@ node {
 }
 ```
 
-This the *jenkinsfile* which is for the job that is creating the container image.
+This the **jenkinsfile** which is for the job that is creating the container image.
 
 In the first stage it clones this repository into the jenkins enviroment and then it builds the container image.
 
