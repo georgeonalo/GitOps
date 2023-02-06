@@ -1,7 +1,7 @@
 # End to end  Deployment in Kubernetes clusters using Jenkins, GitOps and GitHub Pipeline
 
 ### What are we going to achieve in this project?
-We have an application running in kubernetes, that application is saying *Hello, My Docker project!*, and the magic starts happening when we change the code and push it to github. As soon as you commit the changes, a jenkins job get submitted automatically, builds a new image, pushes the image to Dockerhub, changes the deployment file with the latest image id, the new image automatically gets deployed to the kubernetes cluster using gitops, and our application starts pointing to the new pod.
+We have an application running in kubernetes, that application is saying *Pls subscribe, like and comment on this video. TY!!!*, and the magic starts happening when we change the code and push it to github. As soon as you commit the changes, a jenkins job get submitted automatically, builds a new image, pushes the image to Dockerhub, changes the deployment file with the latest image id, the new image automatically gets deployed to the kubernetes cluster using gitops, and our application starts pointing to the new pod.
 
 ### What will be covered in this project:
 * GitOps Workflow
@@ -50,7 +50,7 @@ This is the [kubernetescode](https://github.com/georgeonalo/kubernetescode) repo
 
 
 ![repo 2](https://user-images.githubusercontent.com/115881685/215599843-cb39bd01-d67f-409d-b036-74d09f934678.png)
-Our application code is *app.py*. It is a very simple python program, which is importing the library flask and just returning Hello, Docker project!
+Our application code is *app.py*. It is a very simple python program, which is importing the library flask and just returning pls subscribe, like and comment on this video, TY!!!
 
 
 ![repo 3](https://user-images.githubusercontent.com/115881685/215601234-51d90fb6-7a68-4694-82e4-685522b55f7d.png)
@@ -286,12 +286,12 @@ For detailed instruction on how to install ArgoCD, click on the official ArgoCD 
 
 Next we have to point GitOps(ArgoCD) to our kubernetesmanifest repository and deploy this app.
 
-To do this, go to the ArgoCD console and click *new app*. Enter the name *flaskdemo*, project: *default*, SYNC POLICY: *Automatic*.
+To do this, go to the ArgoCD console and click **New app**. Enter the name **flaskdemo**, project: **default**, SYNC POLICY: **Automatic**.
 ![image](https://user-images.githubusercontent.com/115881685/215710151-aa7bfc30-1b83-421a-92c5-0622f3f02cb0.png)
 ![image](https://user-images.githubusercontent.com/115881685/215710485-716691b7-fc38-448e-8611-389d4bebe9b7.png)
 
 
-keep everything as it is and scroll down to Repository url which has to be pointed to our kubernetesmanifest repo. so go to the kubernetesmanifest repo and copy the https url and paste it.
+keep everything as it is and scroll down to Repository url which has to be pointed to our kubernetesmanifest repo. so go to the **kubernetesmanifest repo** and copy the https url and paste it.
 ![image](https://user-images.githubusercontent.com/115881685/215710716-dc71db40-7171-48d9-a331-c26408e70bdb.png)
 ![image](https://user-images.githubusercontent.com/115881685/215711027-7e3dd6d9-bf28-400e-b11c-a5bdb795493b.png)
 
@@ -304,11 +304,11 @@ And our application is deployed, click on it, and it will show you the flow, it 
 
 ![image](https://user-images.githubusercontent.com/115881685/215712799-5fb41a23-4b37-42c2-9dbe-be2399271713.png)
 
-If we go back to our terminal and run kubectl get pos, we will see our three pods
+If we go back to our terminal and run **kubectl get pod**, we will see our three pods
 
 ![image](https://user-images.githubusercontent.com/115881685/215713085-056312d4-9261-406a-a888-236e21c96302.png)
 
-To get the loadbalancer url, run kubectl get svc
+To get the loadbalancer url, run **kubectl get svc**
 
 ![image](https://user-images.githubusercontent.com/115881685/215713503-c0069976-df3f-4448-8043-25a809041725.png)
 
