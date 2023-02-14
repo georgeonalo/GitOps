@@ -425,7 +425,6 @@ Alright folks, we did it, end to end deployment into kubernetes cluster using je
 
 
 
-Click this link for instructions on how to impliment this project: [Tutorial](https://youtu.be/o4QG_kqYvHk)
 
 
 
