@@ -1,4 +1,4 @@
-# End to end  Deployment in Kubernetes clusters using Jenkins, GitOps and GitHub Pipeline
+# End to end  Deployment in Kubernetes clusters using Jenkins, GitOps(Argocd) and GitHub Pipeline
 
 ### What are we going to achieve in this project?
 We have an application running in kubernetes, that application is saying **"Pls subscribe, like and comment on this video. TY!!!"**, and the magic starts happening when we change the code and push it to github. As soon as you commit the changes, a jenkins job get submitted automatically, builds a new image, pushes the image to Dockerhub, changes the deployment file with the latest image id, the new image automatically gets deployed to the kubernetes cluster using gitops, and our application starts pointing to the new pod.
