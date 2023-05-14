@@ -23,7 +23,11 @@ We have an application running in kubernetes, that application is saying **"Pls 
 * Argocd Installed
 
 
-![image](https://user-images.githubusercontent.com/115881685/209542342-7247a5d7-f6cd-43c0-b419-7d8b82ab7be6.png)
+
+### Project overview (GitOps Flow)
+
+
+![gitOps](https://github.com/georgeonalo/GitOps/assets/115881685/d2b139de-c697-41b1-b442-00baf85d434b)
 
 
 
